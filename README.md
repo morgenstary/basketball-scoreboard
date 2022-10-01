@@ -1,5 +1,3 @@
-# To build a basketball scoreboard with HTML, CSS, & JavaScript
-
 # The objective
 
 After completing the basketball scoreboard challenge in Module 3 of the Scrimba Developer Career path I got some ideas on how I might like to improve it. I was at a fork in the road, I could keep moving on with the course or take a break and use my time to start a new project. Why not do both you ask? I have a very demanding full-time job in another industry and a family so I have very little free time, plus I'm old and old people need to sleep. Anyway, I started looking around the internet and found a site that makes digital scoreboards for basketball games (https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.XgyFHAMkt3YgoEDdcxhrcwHaEK%26pid%3DApi&f=1&ipt=d8973bcf55c07bd40282cb0bd88ddcea0cb58f5b8b9640a720ec3b9edaa88fdf&ipo=images) and decided to use one of the images as inspiration for my next coding project, deciding to put my front-end course on hold until I finished it. My idea was this, using only HTML, CSS, and JavaScript build a basketball scoreboard that someone could actually use at a real game. 
