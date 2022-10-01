@@ -44,4 +44,4 @@ There were many times during this project where I'd get stuck and hit a wall. So
 # The final result
 
 I feel satisfied and a sense of accomplishment now. I set out to create an interactive basketball scoreboard and met all my self-imposed requirements. There are a few features I'd like to add but those will wait for another time, I'd like to get refocused on completing my front-end course before the next new shiny object lures me away. One of the best ways to learn is to do. Every time I sat down to work on this project I learned something new or reinforced something that I'd already learned, like practicing a musical instrument. Sometimes the lesson was understanding how .foreach methods work, sometimes the lesson was practicing persistence. I have so many ideas and there's so much I'd like to do but I also have so much to learn. This project gave me a little more confidence in my ability to conceptualize something and turn it into something that works.
-![image](https://user-images.githubusercontent.com/40709476/193432227-af809e69-f04c-4361-82f7-6e23921327d7.png)
+
