@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="scoreboard">
+        <div id="event-text">National Championships</div>
+        <div id="scoreboard-frame">
+            <div class="inner-frame" id="home">
+                <div class="logo">
+                    <img id="home-logo" height=80px width=80px>
+                </div>
+                <div id="home-stats">
+                    <div class="team-name-text" id="home-team-name">Home</div>
+                    <div class="score-bkg" id="background-home">
+                        <div id="home-score">0</div>
+                    </div>
+                    <div id="home-bonus">
+                        <div class="bonus-circle" id="home-bonus-2"></div>
+                        <div class="bonus-circle" id="home-bonus-1"></div>
+                        <div id="home-bonus-text">Bonus</div>
+                    </div>
+                    <div class="lower-stats">
+                        <div id="home-fouls">
+                            <div id="home-fouls-text">Fouls</div>
+                            <div class="med-bkg">
+                                <div id="home-fouls">
+                                    <div id="home-fouls-num">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="home-tol">
+                            <div id="home-tol-text">T.O.L.</div>
+                            <div class="sml-bkg">
+                                <div id="home-tol-num">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-frame" id="stats">
+                <div id="clock-frame">
+                    <div id="clock-bkg">
+                        <div id="clock">
+                            <div class="count-digit">1</div>
+                            <div class="count-digit">2</div>
+                            <div class="separator">:</div>
+                            <div class="count-digit">0</div>
+                            <div class="count-digit">0</div>
+                        </div>
+
+                        <div id="overtime">
+                            <!-- add letters "o" & "t" here when OT button is pressed -->
+                            <!-- change color of clock to yellow when OT button is pressed -->
+                            <!-- set clock to 5 min when OT button is pressed -->
+                            <div id="letter-o"></div>
+                            <div id="letter-t"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="period">
+                    <div id="period-text">Period</div>
+                    <div id="period-bkg">
+                        <div id="period-num">1</div>
+                    </div>
+                </div>
+                <div class="lower-stats">
+                    <div id="player">
+                        <div id="player-text">Player</div>
+                        <div class="med-bkg">
+                            <div id="player-bkg">
+                                <div id="player-num">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="player-fouls">
+                        <div id="player-fouls-text">Fouls</div>
+                        <div class="med-bkg">
+                            <div id="player-fouls-bkg">
+                                <div id="player-fouls-num">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-frame" id="guest">
+                <div class="logo">
+                    <img id="guest-logo" height=80px width=80px>
+                </div>
+                <div id="guest-stats">
+                    <div class="team-name-text" id="guest-team-name">Guest</div>
+                    <div class="score-bkg" id="background-guest">
+                        <div id="guest-score">0</div>
+                    </div>
+                    <div id="guest-bonus">
+                        <div id="guest-bonus-text">Bonus</div>
+                        <div class="bonus-circle" id="guest-bonus-1"></div>
+                        <div class="bonus-circle" id="guest-bonus-2"></div>
+                    </div>
+                    <div class="lower-stats">
+                        <div id="guest-fouls">
+                            <div id="guest-fouls-text">Fouls</div>
+                            <div class="med-bkg">
+                                <div id="guest-fouls">
+                                    <div id="guest-fouls-num">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="guest-tol">
+                            <div id="guest-tol-text">T.O.L.</div>
+                            <div class="sml-bkg">
+                                <div id="guest-tol-num">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="controlboard">
+        <div id="controlboard-frame">
+            <div id="top-control">
+                <div id="event-control">
+                    <div class="noselect" id="event-name-text">Event Name</div>
+                    <input type="text" id="event-input" placeholder="National Championships">
+                    <div id="event-name-mods">
+                        <div class="noselect" id="event-name-enter">Enter:</div>
+                        <button class="btn" id="event-name-enter-btn"></button>
+                        <div class="noselect" id="event-name-clear">Clear:</div>
+                        <button class="btn" id="clear-event-name-btn"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="control-panels-lcr">
+            <div id="control-panel-l">
+                <div id="home-module">
+                    <div id="home-text">Home</div>
+                    <div id="add-home">
+                        <div class="add-points" id="home-add-one-btn">
+                            <div class="noselect" id="home-add-one">+1</div>
+                        </div>
+                        <div class="add-points" id="home-add-two-btn">
+                            <div class="noselect" id="home-add-two">+2</div>
+                        </div>
+                        <div class="add-points" id="home-add-three-btn">
+                            <div class="noselect" id="home-add-three">+3</div>
+                        </div>
+                    </div>
+
+                    <div id="home-bonus-module">
+                        <div class="noselect" id="home-bonus-text">Bonus</div>
+                        <div id="home-bonus-mods">
+                            <div class="noselect" id="home-bonus-add">Add:</div>
+                            <button class="btn-2" id="home-bonus-add-btn"></button>
+                            <div class="noselect" id="home-bonus-clear">Clear:</div>
+                            <button class="btn-2" id="home-bonus-clear-btn"></button>
+                        </div>
+                    </div>
+
+                    <div id="home-fouls-module">
+                        <div class="noselect" id="home-fouls-text">Fouls</div>
+                        <div id="home-fouls-mods">
+                            <div class="noselect" id="home-fouls-add">Add:</div>
+                            <button class="btn-2" id="home-fouls-add-btn"></button>
+                            <div class="noselect" id="home-fouls-clear">Clear:</div>
+                            <button class="btn-2" id="home-fouls-clear-btn"></button>
+                        </div>
+                    </div>
+
+                    <div id="home-tol-module">
+                        <div class="noselect" id="home-tol-text">T.O.L.</div>
+                        <div id="home-tol-mods">
+                            <div class="noselect" id="home-tol-add">Add:</div>
+                            <button class="btn-2" id="home-tol-add-btn"></button>
+                            <div class="noselect" id="home-tol-clear">Clear:</div>
+                            <button class="btn-2" id="home-tol-clear-btn"></button>
+                        </div>
+                    </div>
+
+                    <div id="home-logo-module"></div>
+                    <div class="noselect" id="home-logo-text">Logo</div>
+                    <div id="home-logo-input-box">
+                        <label for="upload-home-logo">Upload image</label>
+                        <input type="file" id="upload-home-logo" accept="image/*" onchange="homeLogo(event)">
+                    </div>
+                </div>
+
+                <div id="home-name-module">
+                    <div class="noselect" id="home-name-text">Home Name</div>
+                    <input type="text" id="home-name" maxlength="11" placeholder="Enter team one name">
+                    <div id="home-name-mods">
+                        <div class="noselect" id="home-name-enter">Enter:</div>
+                        <button class="btn-2" id="home-name-enter-btn"></button>
+                        <div class="noselect" id="home-name-clear">Clear:</div>
+                        <button class="btn-2" id="home-name-clear-btn"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="control-panel-c">
+                <div id="timer-module">
+                    <div class="noselect" id="timer-text">Timer</div>
+                    <div id="timer-set-module">
+                        <div class="noselect" id="timer-set-text">Set:</div>
+                        <div id="timer-set-bkg">
+                            <input type="number" id="timer-set-min" value="12" onclick="(this.value = null)"
+                                onkeyup="if(this.value > 99) this.value = null">
+                            <div id="timer-set-colon">:</div>
+                            <input type="number" id="timer-set-sec" value="00" onclick="(this.value = null)"
+                                onkeyup="if(this.value > 59) this.value = null">
+                        </div>
+                    </div>
+
+                    <div id="timer-set-module-2">
+                        <div class="noselect" id="timer-enter">Enter:</div>
+                        <button class="btn-2" id="timer-enter-btn"></button>
+                    </div>
+
+                    <div id="timer-set-module-3">
+                        <div class="noselect" id="timer-start">Start:</div>
+                        <button class="btn-2" id="timer-start-btn"></button>
+                        <div class="noselect" id="timer-stop">Stop:</div>
+                        <button class="btn-3" id="timer-stop-btn"></button>
+                    </div>
+
+                    <div id="timer-set-module-4">
+                        <div class="noselect" id="timer-clear">Clear:</div>
+                        <button class="btn-2" id="timer-clear-btn"></button>
+                        <div class="noselect" id="timer-ot">OT:</div>
+                        <button class="btn-2" id="timer-ot-btn"></button>
+                    </div>
+                </div>
+
+                <div id="period-module">
+                    <div class="noselect" id="period-set-text">Period</div>
+                    <div id="period-set-module">
+                        <div class="noselect" id="period-adv">Adv:</div>
+                        <button class="btn-2" id="period-adv-btn"></button>
+                        <div class="noselect" id="period-clear">Clear:</div>
+                        <button class="btn-2" id="period-clear-btn"></button>
+                    </div>
+                </div>
+
+                <div id="player-module">
+                    <div class="noselect" id="player-mod-text">Player</div>
+                    <div id="player-fouls-module">
+                        <div class="noselect" id="player-num-text">Player:</div>
+                        <input type="number" id="player-num-set" value="00">
+                        <div class="noselect" id="player-fouls-mod-text">Fouls:</div>
+                        <input type="number" id="player-fouls-set" value="00">
+                    </div>
+
+                    <div id="player-fouls-buttons">
+                        <div class="noselect" id="player-fouls-enter">Enter:</div>
+                        <button class="btn-2" id="player-fouls-enter-btn"></button>
+                        <div class="noselect" id="player-fouls-clear">Clear:</div>
+                        <button class="btn-2" id="player-fouls-clear-btn"></button>
+                    </div>
+                </div>
+
+                <div id="scoreboard-control">
+                    <div class="noselect" id="scoreboard-text">Scoreboard</div>
+                    <div id="scoreboard-mods">
+                        <div class="noselect" id="scoreboard-clear">Clear:</div>
+                        <button class="btn" id="clear-scoreboard-btn"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="control-panel-r">
+                <div id="guest-module">
+                    <div class="noselect" id="guest-text">Guest</div>
+
+                    <div id="add-guest">
+                        <div class="add-points" id="guest-add-one-btn">
+                            <div class="noselect" id="guest-add-one">+1</div>
+                        </div>
+                        <div class="add-points" id="guest-add-two-btn">
+                            <div class="noselect" id="guest-add-two">+2</div>
+                        </div>
+                        <div class="add-points" id="guest-add-three-btn">
+                            <div class="noselect" id="guest-add-three">+3</div>
+                        </div>
+                    </div>
+
+                    <div id="guest-bonus-module">
+                        <div class="noselect" id="guest-bonus-text">Bonus</div>
+                        <div id="guest-bonus-mods">
+                            <div class="noselect" id="guest-bonus-add">Add:</div>
+                            <button class="btn-2" id="guest-bonus-add-btn"></button>
+                            <div class="noselect" id="guest-bonus-clear">Clear:</div>
+                            <button class="btn-2" id="guest-bonus-clear-btn"></button>
+                        </div>
+                    </div>
+
+                    <div id="guest-fouls-module">
+                        <div class="noselect" id="guest-fouls-text">Fouls</div>
+                        <div id="guest-fouls-mods">
+                            <div class="noselect" id="guest-fouls-add">Add:</div>
+                            <button class="btn-2" id="guest-fouls-add-btn"></button>
+                            <div class="noselect" id="guest-fouls-clear">Clear:</div>
+                            <button class="btn-2" id="guest-fouls-clear-btn"></button>
+                        </div>
+                    </div>
+
+                    <div id="guest-tol-module">
+                        <div class="noselect" id="guest-tol-text">T.O.L.</div>
+                        <div id="guest-tol-mods">
+                            <div class="noselect" id="guest-tol-add">Add:</div>
+                            <button class="btn-2" id="guest-tol-add-btn"></button>
+                            <div class="noselect" id="guest-tol-clear">Clear:</div>
+                            <button class="btn-2" id="guest-tol-clear-btn"></button>
+                        </div>
+                    </div>
+
+                    <div id="guest-logo-module"></div>
+                    <div class="noselect" id="guest-logo-text">Logo</div>
+                    <div id="guest-logo-input-box">
+                        <label for="upload-guest-logo">Upload image</label>
+                        <form>
+                            <input type="file" id="upload-guest-logo" accept="image/*" onchange="guestLogo(event)">
+                        </form>
+                    </div>
+                </div>
+
+                <div id="guest-name-module">
+                    <div class="noselect" id="guest-name-text">Guest Name</div>
+                    <input type="text" id="guest-name" maxlength="11" placeholder="Enter team two name">
+                    <div id="guest-name-mods">
+                        <div class="noselect" id="guest-name-enter">Enter:</div>
+                        <button class="btn-2" id="guest-name-enter-btn"></button>
+                        <div class="noselect" id="guest-name-clear">Clear:</div>
+                        <button class="btn-2" id="guest-name-clear-btn"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
